@@ -1,0 +1,10 @@
+version: '2'
+services:
+  chat:
+    image: ladicle/docker-revel:latest
+    command: revel run chat
+    ports:
+      - "8080:8080"
+    volumes:
+      - "$PWD/src:/go/src/chat"
+    restart: always
